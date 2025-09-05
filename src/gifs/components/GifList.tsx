@@ -4,8 +4,7 @@ import type { FC } from "react";
 
 // Importamos el tipo Gif que define la estructura de un gif
 // (id, url, title, width, height, etc.).
-import type { Gif } from "../../mock-data/gif.mocks";
-
+import type { Gif } from "../interfaces/gif.interface";
 // Definimos la interfaz de las props que recibirá el componente
 // En este caso, recibe un arreglo de gifs (Gif[]).
 interface Props {
