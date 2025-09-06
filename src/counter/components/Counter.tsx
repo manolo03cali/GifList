@@ -6,7 +6,7 @@ export const Counter = () => {
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <h1>Counter:{counter} </h1>
+      <h1>Counter:{counter}</h1>
       <div
         style={{
           display: "flex",
