@@ -60,3 +60,5 @@ export default tseslint.config({
 # Instalaciones
 
 1. npm install axios
+   Para realizar simulaciones de todo lo que es axios
+2. npm install axios-mock-adapter --save-dev
