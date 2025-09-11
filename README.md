@@ -62,3 +62,16 @@ export default tseslint.config({
 1. npm install axios
    Para realizar simulaciones de todo lo que es axios
 2. npm install axios-mock-adapter --save-dev
+
+# INtegrar pruebas con versión de producción
+
+"scripts": {
+"dev": "vite",
+"build": "npm run test:only && tsc -b && vite build",
+"lint": "eslint .",
+"preview": "vite preview",
+"test": "vitest",
+"test:ui": "vitest --ui",
+"test:only": "vitest run",
+"coverage": "vitest run --coverage"
+},

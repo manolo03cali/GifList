@@ -79,4 +79,16 @@ describe("SearchBar", () => {
 
     expect(screen.getByPlaceholderText(value)).toBeDefined(); // debe encontrarse el placeholder
   });
+  test("should call onQuery when Enter key is pressed", () => {
+    const onQuery = vi.fn();
+    render(<SearchBar onQuery={onQuery} />);
+    const input = screen.getByRole("textbox");
+    //simulamos que el usuario escribe algo
+    fireEvent.change(input, { target: { value: "test" } });
+    //simulamos que presiona enter
+    fireEvent.keyDown(input, { key: "Enter", code: "Enter", charCode: 13 });
+
+    expect(onQuery).toHaveBeenCalledTimes(1);
+    expect(onQuery).toHaveBeenCalledWith("test");
+  });
 });
